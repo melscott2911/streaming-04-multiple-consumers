@@ -37,14 +37,18 @@ channel = connection.channel()
 channel.queue_declare(queue="task_queue", durable=True)
 # create a message by joining the command line arguments
 message = " ".join(sys.argv[1:]) or "First task..."
+message2 = " ".join(sys.argv[1:]) or "Mel Second task..."
+message3 = " ".join(sys.argv[1:]) or "Mel Third task..."
 # publish the message to the queue
 channel.basic_publish(
     exchange="",
     routing_key="task_queue",
-    body=message,
+    body=message
+    body=message2
+    body=message3
     properties=pika.BasicProperties(delivery_mode=pika.spec.PERSISTENT_DELIVERY_MODE),
 )
 # tell the user the message was sent
-print(f" [x] Sent {message}")
+print(f" [x] Sent {messages}")
 # close the connection to the server
 connection.close()
