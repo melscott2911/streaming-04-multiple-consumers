@@ -59,5 +59,6 @@ Which worker gets which tasks?
 
 
 ## Screenshot
-![Mel Example](../../../Desktop/Screen%20Shot%202023-02-06%20at%208.23.06%20PM.png)
+
 See a running example with at least 3 concurrent process windows here:
+![Mel Example](../Screen%20Shot%202023-02-06%20at%208.23.06%20PM.png)
